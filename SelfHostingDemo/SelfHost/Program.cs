@@ -18,19 +18,19 @@ namespace SelfHost
                 ServiceEndpoint BasicHttpEndPoint1 = serviceHost.AddServiceEndpoint(
                     typeof(IMathService),
                     new BasicHttpBinding(),
-                    "http://localhost:4444/MathService"
+                    "http://127.0.0.1:4444/MathService"
                 );
 
                 ServiceEndpoint BasicHttpEndPoint2 = serviceHost.AddServiceEndpoint(
                     typeof(IMathService),
                     new BasicHttpBinding(),
-                    "http://localhost:5555/MathService"
+                    "http://127.0.0.1:5555/MathService"
                 );
 
                 ServiceEndpoint NettcpEndPoint = serviceHost.AddServiceEndpoint(
                     typeof(IMathService),
                     new NetTcpBinding(),
-                    "net.tcp://localhost:6666/IMathService"
+                    "net.tcp://127.0.0.1:6666/IMathService"
                 );
 
                 serviceHost.Open();
